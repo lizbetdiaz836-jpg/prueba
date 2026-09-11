@@ -1,0 +1,687 @@
+```css
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #17365d;
+    --primary-dark: #0f2745;
+    --secondary: #2f75b5;
+
+    --background: #f4f6f8;
+    --surface: #ffffff;
+
+    --text: #1f2933;
+    --muted: #64748b;
+
+    --border: #d9e0e7;
+
+    --code-bg: #17212b;
+
+    --white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.hero {
+    min-height: 520px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f2745 0%,
+            #17365d 55%,
+            #245a8d 100%
+        );
+
+    color: var(--white);
+
+    border-bottom: 5px solid var(--secondary);
+}
+
+
+/* =========================================
+   NAVEGACIÓN
+========================================= */
+
+.nav {
+    width: min(1120px, 92%);
+
+    margin: auto;
+
+    padding: 24px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+
+    border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+.logo {
+    font-size: 1.35rem;
+
+    font-weight: 700;
+
+    letter-spacing: .3px;
+
+    margin-right: auto;
+}
+
+.logo span {
+    color: #7db4df;
+}
+
+.nav a {
+    color: #e8eef5;
+
+    text-decoration: none;
+
+    font-size: .9rem;
+
+    font-weight: 500;
+
+    transition: .2s ease;
+}
+
+.nav a:hover {
+    color: white;
+}
+
+
+/* =========================================
+   CONTENIDO PRINCIPAL DEL HERO
+========================================= */
+
+.hero-content {
+    width: min(900px, 92%);
+
+    margin: 105px auto 0;
+
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--secondary);
+
+    font-size: .75rem;
+
+    font-weight: 700;
+
+    letter-spacing: .18em;
+
+    margin-bottom: 12px;
+}
+
+.hero .eyebrow {
+    color: #9ec7e6;
+}
+
+h1 {
+    font-size: clamp(
+        2.6rem,
+        6vw,
+        4.8rem
+    );
+
+    line-height: 1.05;
+
+    letter-spacing: -.035em;
+
+    margin-bottom: 25px;
+
+    font-weight: 700;
+}
+
+h1 span {
+    color: #9ec7e6;
+}
+
+.hero-content > p:not(.eyebrow) {
+    max-width: 680px;
+
+    margin: 0 auto 32px;
+
+    color: #dce6ef;
+
+    font-size: 1.05rem;
+}
+
+
+/* =========================================
+   BOTÓN PRINCIPAL
+========================================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    border-radius: 6px;
+
+    background: var(--white);
+
+    color: var(--primary);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    font-size: .9rem;
+
+    border: 1px solid white;
+
+    transition: .2s ease;
+}
+
+.btn:hover {
+    background: #eaf2f8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+.section {
+    width: min(1120px, 92%);
+
+    margin: auto;
+
+    padding: 85px 0;
+}
+
+.section-title {
+    margin-bottom: 32px;
+}
+
+.section-title h2 {
+    font-size: 2.1rem;
+
+    line-height: 1.2;
+
+    margin-bottom: 8px;
+
+    color: var(--primary);
+
+    font-weight: 700;
+}
+
+.section-title > p:last-child {
+    color: var(--muted);
+
+    font-size: .95rem;
+}
+
+
+/* =========================================
+   BUSCADOR
+========================================= */
+
+.search-box {
+    margin-bottom: 28px;
+}
+
+.search-box input {
+    width: 100%;
+
+    padding: 14px 17px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 6px;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    font-family: inherit;
+
+    font-size: .95rem;
+
+    outline: none;
+
+    transition: .2s ease;
+}
+
+.search-box input::placeholder {
+    color: #8a96a3;
+}
+
+.search-box input:focus {
+    border-color: var(--secondary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(47,117,181,.12);
+}
+
+
+/* =========================================
+   TARJETAS DE COMANDOS
+========================================= */
+
+.command-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.card {
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    padding: 24px;
+
+    position: relative;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+
+    border-color: #b8c7d6;
+
+    box-shadow:
+        0 8px 24px
+        rgba(20,40,60,.08);
+}
+
+
+/* =========================================
+   ETIQUETAS
+========================================= */
+
+.tag {
+    display: inline-block;
+
+    color: var(--primary);
+
+    background: #eaf2f8;
+
+    border: 1px solid #d5e3ef;
+
+    border-radius: 4px;
+
+    padding: 4px 9px;
+
+    font-size: .7rem;
+
+    font-weight: 700;
+
+    margin-bottom: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .04em;
+}
+
+.card h3 {
+    font-size: 1.05rem;
+
+    margin-bottom: 6px;
+
+    color: var(--primary);
+
+    font-weight: 700;
+}
+
+.card p {
+    color: var(--muted);
+
+    font-size: .88rem;
+
+    min-height: 52px;
+
+    margin-bottom: 17px;
+}
+
+
+/* =========================================
+   CÓDIGO
+========================================= */
+
+.card code,
+.step code {
+    display: block;
+
+    padding: 12px 13px;
+
+    border-radius: 5px;
+
+    background: var(--code-bg);
+
+    color: #e9eef2;
+
+    font-family:
+        "Cascadia Code",
+        Consolas,
+        Monaco,
+        monospace;
+
+    font-size: .76rem;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+
+    border-left: 3px solid var(--secondary);
+}
+
+
+/* =========================================
+   BOTÓN COPIAR
+========================================= */
+
+.copy-btn {
+    margin-top: 11px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--secondary);
+
+    font-family: inherit;
+
+    font-size: .82rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+.copy-btn:hover {
+    color: var(--primary);
+
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   SIN RESULTADOS
+========================================= */
+
+.no-results {
+    display: none;
+
+    text-align: center;
+
+    color: var(--muted);
+
+    padding: 35px;
+
+    font-size: .9rem;
+}
+
+
+/* =========================================
+   SECCIÓN FLUJO
+========================================= */
+
+.alt {
+    max-width: none;
+
+    background: #e9edf1;
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.alt .section-title,
+.steps {
+    width: min(1120px, 92%);
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+
+/* =========================================
+   PASOS
+========================================= */
+
+.steps {
+    display: flex;
+
+    align-items: stretch;
+
+    gap: 18px;
+}
+
+.step {
+    flex: 1;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    padding: 23px;
+}
+
+.step b {
+    color: var(--secondary);
+
+    font-size: .75rem;
+
+    font-weight: 700;
+
+    letter-spacing: .08em;
+}
+
+.step h3 {
+    margin: 6px 0 16px;
+
+    color: var(--primary);
+
+    font-size: 1rem;
+}
+
+.arrow {
+    align-self: center;
+
+    font-size: 1.4rem;
+
+    color: #7b8794;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   GIT VS GITHUB
+========================================= */
+
+.concepts {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+}
+
+.concept {
+    padding: 28px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    border-top: 3px solid var(--secondary);
+}
+
+.concept h3 {
+    margin-bottom: 9px;
+
+    color: var(--primary);
+
+    font-size: 1.15rem;
+}
+
+.concept p {
+    color: var(--muted);
+
+    font-size: .92rem;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 28px;
+
+    text-align: center;
+
+    color: #7b8794;
+
+    background: #ffffff;
+
+    font-size: .82rem;
+
+    border-top:
+        1px solid var(--border);
+}
+
+
+/* =========================================
+   MENSAJE "COPIADO"
+========================================= */
+
+.toast {
+    position: fixed;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, 20px);
+
+    background: var(--primary);
+
+    color: white;
+
+    padding: 11px 20px;
+
+    border-radius: 5px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: .25s ease;
+
+    font-size: .85rem;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,.18);
+}
+
+.toast.show {
+    opacity: 1;
+
+    transform:
+        translate(-50%, 0);
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLETS
+========================================= */
+
+@media (max-width: 850px) {
+
+    .command-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .steps {
+        flex-direction: column;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+
+        text-align: center;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - CELULARES
+========================================= */
+
+@media (max-width: 560px) {
+
+    .nav a {
+        display: none;
+    }
+
+    .hero-content {
+        margin-top: 80px;
+    }
+
+    .command-grid,
+    .concepts {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    h1 {
+        font-size: 2.7rem;
+    }
+
+    .hero-content > p:not(.eyebrow) {
+        font-size: .95rem;
+    }
+}

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Branch → GitHub</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <header class="hero">
+        <nav class="nav">
+            <div class="logo">Git<span>Guide</span></div>
+
+            <a href="#comandos">Comandos</a>
+            <a href="#flujo">Flujo básico</a>
+            <a href="#github">GitHub</a>
+        </nav>
+
+        <div class="hero-content">
+            <p class="eyebrow">GUÍA RÁPIDA</p>
+
+            <h1>
+                De <span>git branch</span> a GitHub
+            </h1>
+
+            <p>
+                Aprende los comandos esenciales para crear ramas,
+                trabajar en ellas y subir tus cambios a GitHub.
+            </p>
+
+            <a class="btn" href="#comandos">
+                Ver comandos ↓
+            </a>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- COMANDOS -->
+        <section id="comandos" class="section">
+
+            <div class="section-title">
+                <p class="eyebrow">COMANDOS ESENCIALES</p>
+
+                <h2>Git Branch</h2>
+
+                <p>
+                    Busca un comando y copia el código que necesitas.
+                </p>
+            </div>
+
+
+            <!-- BUSCADOR -->
+            <div class="search-box">
+                <input
+                    id="searchInput"
+                    type="text"
+                    placeholder="🔎 Buscar: crear, eliminar, cambiar..."
+                >
+            </div>
+
+
+            <div id="commandGrid" class="command-grid">
+
+
+                <!-- 1 -->
+                <article class="card" data-search="ver ramas branch lista listar">
+
+                    <span class="tag">Consultar</span>
+
+                    <h3>Ver ramas</h3>
+
+                    <p>
+                        Muestra las ramas existentes en tu proyecto.
+                    </p>
+
+                    <code>git branch</code>
+
+                    <button class="copy-btn">
+                        Copiar
+                    </button>
+
+                </article>
+
+
+                <!-- 2 -->
+                <article class="card" data-search="crear rama nueva">
+
+                    <span class="tag">Crear</span>
+
+                    <h3>Crear una rama</h3>
+
+                    <p>
+                        Crea una rama nueva sin cambiarte a ella.
+                    </p>
+
+                    <code>git branch nombre-rama</code>
+
+                    <button class="copy-btn">
+                        Copiar
+                    </button>
+
+                </article>
+
+
+                <!-- 3 -->
+                <article class="card" data-search="cambiar rama switch checkout">
+
+                    <span class="tag">Cambiar</span>
+
+                    <h3>Cambiar de rama</h3>
+
+                    <p>
+                        Te mueve a una rama que ya existe.
+                    </p>
+
+                    <code>git switch nombre-rama</code>
+
+                    <button class="copy-btn">
+                        Copiar
+                    </button>
+
+                </article>
+
+
+                <!-- 4 -->
+                <article class="card" data-search="crear cambiar rama switch">
+
+                    <span class="tag">Crear + cambiar</span>
+
+                    <h3>Crear y cambiar</h3>
+
+                    <p>
+                        Crea una rama y cambia a ella en un solo paso.
+                    </p>
+
+                    <code>git switch -c nombre-rama</code>
+
+                    <button class="copy-btn">
+                        Copiar
+                    </button>
+
+                </article>
+
+
+                <!-- 5 -->
+                <article class="card" data-search="eliminar borrar rama delete">
+
+                    <span class="tag">Eliminar</span>
+
+                    <h3>Eliminar una rama</h3>
+
+                    <p>
+                        Elimina una rama local que ya no necesitas.
+                    </p>
+
+                    <code>git branch -d nombre-rama</code>
+
+                    <button class="copy-btn">
+                        Copiar
+                    </button>
+
+                </article>
+
+
+                <!-- 6 -->
+                <article class="card" data-search="forzar eliminar borrar">
+
+                    <span class="tag">Eliminar</span>
+
+                    <h3>Forzar eliminación</h3>
+
+                    <p>
+                        Elimina una rama aunque tenga cambios sin fusionar.
+                    </p>
+
+                    <code>git branch -D nombre-rama</code>
+
+                    <button class="copy-btn">
+                        Copiar
+                    </button>
+
+                </article>
+
+
+                <!-- 7 -->
+                <article class="card" data-search="renombrar rama">
+
+                    <span class="tag">Renombrar</span>
+
+                    <h3>Renombrar rama</h3>
+
+                    <p>
+                        Cambia el nombre de la rama actual.
+                    </p>
+
+                    <code>git branch -m nuevo-nombre</code>
+
+                    <button class="copy-btn">
+                        Copiar
+                    </button>
+
+                </article>
+
+
+                <!-- 8 -->
+                <article class="card" data-search="rama remota remoto">
+
+                    <span class="tag">Remoto</span>
+
+                    <h3>Ver ramas remotas</h3>
+
+                    <p>
+                        Muestra las ramas de los repositorios remotos.
+                    </p>
+
+                    <code>git branch -r</code>
+
+                    <button class="copy-btn">
+                        Copiar
+                    </button>
+
+                </article>
+
+
+                <!-- 9 -->
+                <article class="card" data-search="todas ramas remoto local">
+
+                    <span class="tag">Consultar</span>
+
+                    <h3>Ver todas las ramas</h3>
+
+                    <p>
+                        Muestra ramas locales y remotas.
+                    </p>
+
+                    <code>git branch -a</code>
+
+                    <button class="copy-btn">
+                        Copiar
+                    </button>
+
+                </article>
+
+
+                <!-- 10 -->
+                <article class="card" data-search="fusionar merge rama">
+
+                    <span class="tag">Unir</span>
+
+                    <h3>Fusionar una rama</h3>
+
+                    <p>
+                        Integra los cambios de otra rama en la actual.
+                    </p>
+
+                    <code>git merge nombre-rama</code>
+
+                    <button class="copy-btn">
+                        Copiar
+                    </button>
+
+                </article>
+
+
+                <!-- 11 -->
+                <article class="card" data-search="actualizar remoto fetch">
+
+                    <span class="tag">Actualizar</span>
+
+                    <h3>Actualizar información remota</h3>
+
+                    <p>
+                        Descarga referencias nuevas sin modificar tus archivos.
+                    </p>
+
+                    <code>git fetch origin</code>
+
+                    <button class="copy-btn">
+                        Copiar
+                    </button>
+
+                </article>
+
+
+                <!-- 12 -->
+                <article class="card" data-search="subir rama github push">
+
+                    <span class="tag">GitHub</span>
+
+                    <h3>Subir rama a GitHub</h3>
+
+                    <p>
+                        Publica tu rama y configura el seguimiento remoto.
+                    </p>
+
+                    <code>git push -u origin nombre-rama</code>
+
+                    <button class="copy-btn">
+                        Copiar
+                    </button>
+
+                </article>
+
+
+                <!-- 13 -->
+                <article class="card" data-search="borrar rama github remoto">
+
+                    <span class="tag">GitHub</span>
+
+                    <h3>Eliminar rama de GitHub</h3>
+
+                    <p>
+                        Borra una rama del repositorio remoto.
+                    </p>
+
+                    <code>git push origin --delete nombre-rama</code>
+
+                    <button class="copy-btn">
+                        Copiar
+                    </button>
+
+                </article>
+
+            </div>
+
+
+            <p id="noResults" class="no-results">
+                No se encontraron comandos.
+            </p>
+
+        </section>
+
+
+        <!-- FLUJO -->
+        <section id="flujo" class="section alt">
+
+            <div class="section-title">
+
+                <p class="eyebrow">
+                    PASO A PASO
+                </p>
+
+                <h2>
+                    Flujo básico de trabajo
+                </h2>
+
+            </div>
+
+
+            <div class="steps">
+
+                <div class="step">
+
+                    <b>01</b>
+
+                    <h3>
+                        Crear rama
+                    </h3>
+
+                    <code>
+                        git switch -c nueva-rama
+                    </code>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div class="step">
+
+                    <b>02</b>
+
+                    <h3>
+                        Trabajar
+                    </h3>
+
+                    <code>
+                        git add .<br>
+                        git commit -m "Mi cambio"
+                    </code>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div class="step">
+
+                    <b>03</b>
+
+                    <h3>
+                        Subir a GitHub
+                    </h3>
+
+                    <code>
+                        git push -u origin nueva-rama
+                    </code>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GITHUB -->
+        <section id="github" class="section">
+
+            <div class="section-title">
+
+                <p class="eyebrow">
+                    CONCEPTOS
+                </p>
+
+                <h2>
+                    Git vs. GitHub
+                </h2>
+
+            </div>
+
+
+            <div class="concepts">
+
+                <div class="concept">
+
+                    <h3>
+                        Git
+                    </h3>
+
+                    <p>
+                        Es el sistema de control de versiones que
+                        funciona en tu computadora. Te permite registrar
+                        cambios y trabajar con ramas.
+                    </p>
+
+                </div>
+
+
+                <div class="concept">
+
+                    <h3>
+                        GitHub
+                    </h3>
+
+                    <p>
+                        Es una plataforma donde puedes alojar repositorios
+                        Git, compartir código y colaborar con otras personas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            GitGuide · Guía sencilla de Git y GitHub
+        </p>
+
+    </footer>
+
+
+    <div id="toast" class="toast">
+        ¡Comando copiado!
+    </div>
+
+
+    <script src="index.js"></script>
+
+</body>
+</html>
